@@ -1,0 +1,25 @@
+[package]
+description = "Created with Anchor"
+edition = "2021"
+name = "sub-client"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "sub_client"
+
+[features]
+cpi = ["no-entrypoint"]
+default = []
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+
+[profile.release]
+overflow-checks = true
+
+[dependencies]
+anchor-lang = "0.24.2"
+
+[dev-dependencies]
+anchor-client = "0.24.2"
